@@ -1,11 +1,8 @@
-```markdown
 # [Guide] How to install ERPNext v16 on Linux Ubuntu 24.04 (step-by-step instructions)
 
 **Author:** shashank_shirke  
 **Date:** Jan 16, 2026  
 **Views:** 5.2k | **Likes:** 22
-
----
 
 ## 📋 Table of Contents
 1. [Server Setup](#step-1-server-setup)
@@ -18,8 +15,6 @@
 8. [Install ERPNext and other Apps](#step-8-install-erpnext-and-other-apps)
 9. [Custom Domain & SSL Setup](#step-9-custom-domain--ssl-setup)
 
----
-
 ## 🛠 Pre-Requisites
 * **Operating System:** Linux Ubuntu 24.04 LTS
 * **Access:** SSH access to the server
@@ -30,8 +25,6 @@
     * Redis 6+
     * Yarn 1.22+
     * Pip 25.3+
-
----
 
 ## STEP 1: SERVER SETUP
 
@@ -61,8 +54,6 @@ sudo usermod -aG sudo [frappe-user]
 su [frappe-user]
 cd /home/[frappe-user]/
 ```
-
----
 
 ## STEP 2: INSTALL REQUIRED PACKAGES
 
