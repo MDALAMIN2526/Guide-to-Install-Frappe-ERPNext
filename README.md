@@ -1,9 +1,5 @@
 # [Guide] How to install ERPNext v16 on Linux Ubuntu 24.04 (step-by-step instructions)
 
-**Author:** shashank_shirke  
-**Date:** Jan 16, 2026  
-**Views:** 5.2k | **Likes:** 22
-
 ## 📋 Table of Contents
 1. [Server Setup](#step-1-server-setup)
 2. [Install Required Packages](#step-2-install-required-packages)
