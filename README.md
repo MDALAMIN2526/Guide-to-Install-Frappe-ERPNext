@@ -90,6 +90,9 @@ redis-server --version
 
 ### 2.6 Install wkhtmltopdf
 ```bash
+sudo apt update
+sudo apt install -y wkhtmltopdf
+# or try bellow Process
 sudo wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_arm64.deb
 # Note: Use amd64.deb if on x86 architecture
 sudo dpkg -i wkhtmltox_0.12.6.1-2.jammy_arm64.deb
