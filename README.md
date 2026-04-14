@@ -71,7 +71,7 @@ Frappe v16 recommends using the **uv** package manager.
 sudo apt-get install python3-dev python3-pip python3-setuptools python3-venv -y
 
 cd /home/[frappe-user]/
-curl -LsSf [https://astral.sh/uv/install.sh](https://astral.sh/uv/install.sh) | sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
 source ~/.bashrc
 
 uv python install 3.14 --default
@@ -90,7 +90,7 @@ redis-server --version
 
 ### 2.6 Install wkhtmltopdf
 ```bash
-sudo wget [https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_arm64.deb](https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_arm64.deb)
+sudo wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_arm64.deb
 # Note: Use amd64.deb if on x86 architecture
 sudo dpkg -i wkhtmltox_0.12.6.1-2.jammy_arm64.deb
 sudo apt-get -f install -y
@@ -145,7 +145,7 @@ sudo service mysql restart
 ### 4.1 Install Node 24 via NVM
 ```bash
 cd /home/[frappe-user]/
-curl [https://raw.githubusercontent.com/creationix/nvm/master/install.sh](https://raw.githubusercontent.com/creationix/nvm/master/install.sh) | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 source ~/.profile
 nvm install 24
 nvm use 24
@@ -206,7 +206,11 @@ sudo env "PATH=$PATH" bench setup production [frappe-user]
 ### 7.3 Setup NGINX & Supervisor
 ```bash
 bench setup nginx
-sudo supervisorctl restart all
+bench setup supervisor
+sudo ln -s `pwd`/config/supervisor.conf /etc/supervisor/conf.d/frappe.conf
+sudo supervisorctl reread
+sudo supervisorctl update
+sudo supervisorctl start all
 sudo supervisorctl status
 ```
 
